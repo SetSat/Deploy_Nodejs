@@ -14,7 +14,7 @@ main();
 
 async function main() {
     try {
-        await mongoose.connect(process.env.ATLAS_ENV, { useNewUrlParser: true, authSource: 'admin' });
+        await mongoose.connect(process.env.ATLAS_ENV, { useNewUrlParser: true, useUnifiedTopology: true, authSource: 'admin' });
         console.log("Db connected");
     } catch (err) {
         console.error(err);
